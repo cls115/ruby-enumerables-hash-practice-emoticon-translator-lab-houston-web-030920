@@ -1,8 +1,6 @@
 require 'yaml'
 require 'pry'
 
-def load_library
-  # code goes here
 def load_library(file_path)
   emote_list = YAML.load_file(file_path)
   get_meaning = {}
@@ -18,8 +16,6 @@ def load_library(file_path)
   result = {:get_meaning => get_meaning, :get_emoticon => get_emoticon}
 end
 
-def get_japanese_emoticon
-  # code goes here
 def get_japanese_emoticon(file_path, emoticon)
   library = load_library(file_path)
   found = false
@@ -36,8 +32,7 @@ def get_japanese_emoticon(file_path, emoticon)
   end
 end
 
-def get_english_meaning
-  # code goes here
+
 def get_english_meaning(file_path, emoticon)
   library = load_library(file_path)
   found = false

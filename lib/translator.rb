@@ -2,7 +2,6 @@ require "yaml"
 require "pry"
 
 def load_library
-  # code goes here
 def load_library(file_path)
   lib = YAML.load_file(file_path)
   newHash = {"get_meaning"=> {}, "get_emoticon"=> {} } 
@@ -33,4 +32,3 @@ def get_english_meaning(file_path, j_emoticon)
    lib["get_meaning"][j_emoticon]
  else"Sorry, that emoticon was not found"
  end 
-end 

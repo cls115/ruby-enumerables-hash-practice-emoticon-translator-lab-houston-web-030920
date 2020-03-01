@@ -1,3 +1,6 @@
+require "yaml"
+require 'pry'
+
 def load_library(file_path)
   files = YAML.load_file(file_path)
   result = {"get_meaning" => {}, "get_emoticon" => {}}
@@ -6,6 +9,7 @@ def load_library(file_path)
     result["get_emoticon"][emoticon[0]] = emoticon[1]
   end
   result
+end
   
   def get_japanese_emoticon(file_path, emoticon)
   emo = load_library(file_path)

@@ -19,6 +19,7 @@ end
   else 
     "Sorry, that emoticon was not found"
   end
+end
 
 def get_english_meaning(file_path, emoticon)
   emo = load_library(file_path)
